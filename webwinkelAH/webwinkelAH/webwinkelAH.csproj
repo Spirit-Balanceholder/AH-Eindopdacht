@@ -81,6 +81,7 @@
     <Compile Include="Model\Kar.cs" />
     <Compile Include="Model\Korting.cs" />
     <Compile Include="Model\Merk.cs" />
+    <Compile Include="Model\Merk_heeft_Product.cs" />
     <Compile Include="Model\MyContext.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

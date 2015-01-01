@@ -11,5 +11,9 @@ namespace webwinkelAH.Model
     {
         public int MerkID { get; set; }
         public string Merknaam { get; set; }
+
+     
+
+
     }
 }
