@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace webwinkelAH.Properties
+namespace WebWinkel2._0.Properties
 {
 
 
