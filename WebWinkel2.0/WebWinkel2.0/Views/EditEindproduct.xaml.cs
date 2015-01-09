@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WebWinkel2._0.Views
 {
     /// <summary>
-    /// Interaction logic for EditRecept.xaml
+    /// Interaction logic for EditEindproduct.xaml
     /// </summary>
-    public partial class EditRecept : Window
+    public partial class EditEindproduct : Window
     {
-        public EditRecept()
+        public EditEindproduct()
         {
             InitializeComponent();
         }

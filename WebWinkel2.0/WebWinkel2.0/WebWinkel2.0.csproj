@@ -60,11 +60,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Edit Product.xaml.cs">
+      <DependentUpon>Edit Product.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditAfdeling.xaml.cs">
       <DependentUpon>EditAfdeling.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditEindproduct.xaml.cs">
+      <DependentUpon>EditEindproduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditKorting.xaml.cs">
+      <DependentUpon>EditKorting.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditMerk.xaml.cs">
       <DependentUpon>EditMerk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditRecept.xaml.cs">
+      <DependentUpon>EditRecept.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -87,11 +99,30 @@
     <Compile Include="Repositories\IAfdelingRepository.cs" />
     <Compile Include="ViewModel\AfdelingListViewModel.cs" />
     <Compile Include="ViewModel\AfdelingViewModel.cs" />
+    <Compile Include="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\Edit Product.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EditAfdeling.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EditEindproduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditKorting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EditMerk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditRecept.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,6 +142,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Afdeling.cs" />

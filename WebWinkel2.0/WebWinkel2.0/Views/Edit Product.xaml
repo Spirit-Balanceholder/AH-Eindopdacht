@@ -22,6 +22,6 @@
         <ComboBox Grid.Row="2" Grid.ColumnSpan="2"  Margin="0 2 10 2" Grid.Column="1"></ComboBox>
         
         <Button Grid.Row="4" Margin="0 0 10 5" Grid.Column="1">Ok</Button>
-        <Button Grid.Row="4" Margin="0 0 10 5" Grid.Column="2">Cancel</Button>
+        <Button Name="btnCancel" Click="btnCancel_Click" Grid.Row="4" Margin="0 0 10 5" Grid.Column="2">Cancel</Button>
     </Grid>
 </Window>

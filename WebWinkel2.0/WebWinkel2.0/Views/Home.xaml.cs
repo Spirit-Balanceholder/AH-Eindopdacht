@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WebWinkel2._0.Views;
 
 namespace WebWinkel2._0
 {
@@ -22,6 +23,12 @@ namespace WebWinkel2._0
         public Home()
         {
             InitializeComponent();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            Login lg = new Login();
+            lg.ShowDialog();
         }
     }
 }

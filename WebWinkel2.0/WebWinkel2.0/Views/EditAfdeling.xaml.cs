@@ -23,5 +23,10 @@ namespace WebWinkel2._0.Views
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
