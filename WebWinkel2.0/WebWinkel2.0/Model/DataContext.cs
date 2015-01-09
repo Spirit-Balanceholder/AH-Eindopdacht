@@ -23,20 +23,22 @@ namespace WebWinkel2._0.Model
 
 
         
-       public DbSet<Afdeling> Afdelingen { get; set; }
+        public DbSet<Afdeling> Afdelingen { get; set; }
 
-       public DbSet<Boodschappenlijst> Boodschappenlijst { get; set; }
+        public DbSet<Boodschappenlijst> Boodschappenlijst { get; set; }
 
-       public DbSet<Eindproduct> Eindproducten { get; set; }
+        public DbSet<Eindproduct> Eindproducten { get; set; }
 
-       //volgesmij niet nodig want eindproduct heeft een lijst van kortingen. 
-       public DbSet<Korting> Kortingen { get; set; }
+        //volgesmij niet nodig want eindproduct heeft een lijst van kortingen. 
+        public DbSet<Korting> Kortingen { get; set; }
 
-       public DbSet<Merk> Merken { get; set; }
+        public DbSet<Merk> Merken { get; set; }
 
-       public DbSet<Prijs> Prijzen { get; set; }
+        public DbSet<Prijs> Prijzen { get; set; }
 
-       public DbSet<Product> Producten { get; set; }
+        public DbSet<Product> Producten { get; set; }
+
+        public DbSet<Recept> Recepten { get; set; }
 
       
 

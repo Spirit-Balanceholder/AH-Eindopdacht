@@ -73,6 +73,7 @@
     <Compile Include="Model\Prijs.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Recept.cs" />
+    <Compile Include="Model\TestWaarden.cs" />
     <Compile Include="Repositories\Afdelingrepository.cs" />
     <Compile Include="Repositories\IAfdelingRepository.cs" />
     <Compile Include="ViewModel\AfdelingListViewModel.cs" />
