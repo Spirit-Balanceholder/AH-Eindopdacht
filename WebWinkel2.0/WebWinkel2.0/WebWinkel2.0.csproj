@@ -60,6 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201501091214084_InitialCreate.cs" />
     <Compile Include="Migrations\201501091214084_InitialCreate.Designer.cs">
       <DependentUpon>201501091214084_InitialCreate.cs</DependentUpon>
@@ -78,6 +81,10 @@
     <Compile Include="Repositories\IAfdelingRepository.cs" />
     <Compile Include="ViewModel\AfdelingListViewModel.cs" />
     <Compile Include="ViewModel\AfdelingViewModel.cs" />
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -124,6 +131,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AHApp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
