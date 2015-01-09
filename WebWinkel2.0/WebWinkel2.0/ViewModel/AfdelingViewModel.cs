@@ -9,10 +9,30 @@ using WebWinkel2._0.Model;
 
 namespace WebWinkel2._0.ViewModel
 {
+
+
+
+
     public class AfdelingViewModel : INotifyPropertyChanged
     {
         private Afdeling _afdeling;
-    
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        //properties that link trough to the model's properties.
+        public int AfdelingId
+        {
+            get { return _afdeling.AfdelingId; }
+            set { _afdeling.AfdelingId = value; OnPropertyChanged(); }
+        }
+
+        public String Naam
+        {
+            get { return _afdeling.Naam; }
+            set { _afdeling.Naam = value; OnPropertyChanged(); }
+        }
+        
+    //2 constructors, eentje voor het ontvangen van een model, eentje voor het aanmaken ervan
     public AfdelingViewModel()
         {
             _afdeling = new Afdeling();
@@ -24,7 +44,7 @@ namespace WebWinkel2._0.ViewModel
     }
 
 
-    public event PropertyChangedEventHandler PropertyChanged;
+   
     protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
     {
         if (PropertyChanged != null)

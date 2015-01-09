@@ -13,26 +13,47 @@ namespace WebWinkel2._0.ViewModel
 {
   public class AfdelingListViewModel : INotifyPropertyChanged
   {
+      //for the purpose of navigation
+     // private int _index;
+
+      //our repository for testing purposes 
       IAfdelingRepository afdelingrepository;
 
-    
-
-      //referentie naar 1 item uit de lijst, basis voor het aanmaken van een nieuw element
-      public AfdelingViewModel Afdeling { get; set; }
-
       //lijst van songview models 
-      public ObservableCollection<AfdelingViewModel> afdelingen { get; set; }
-  
-        //constructor
+      public ObservableCollection<AfdelingViewModel> Afdelingen { get; set; }
+
+      //selected object
+      private AfdelingViewModel _selectedAfdeling;
+
+      //reference property for afdeling
+      public AfdelingViewModel SelectedAfdeling
+      {
+          get
+          {
+              return _selectedAfdeling;
+          }
+          set
+          {
+              _selectedAfdeling = value;
+             //!!!!!!!!!!!!!!!!!!!!!!!!!!
+              // RaisePropertyChanged();
+          }
+      }
+
+
+      //class constructor
       public AfdelingListViewModel()
       {
           afdelingrepository = new Afdelingrepository();
-          var afdelingList = afdelingrepository.ToList().Select(s => new AfdelingViewModel(s));
-
-          Afdeling = new AfdelingViewModel();
-          afdelingen = new ObservableCollection<AfdelingViewModel>(afdelingList);
-
+          var afdelingLijst = afdelingrepository.ToList().Select(a => new AfdelingViewModel(a));
+          Afdelingen = new ObservableCollection<AfdelingViewModel>(afdelingLijst);
       }
+  
+
+
+
+
+     
 
 
       public event PropertyChangedEventHandler PropertyChanged;
