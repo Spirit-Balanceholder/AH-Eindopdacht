@@ -20,7 +20,7 @@
         <TextBox Grid.Row="1" Grid.ColumnSpan="2"  Margin="0 2 10 2" Grid.Column="1"></TextBox>
         
         <DataGrid Grid.Row="2" Grid.Column="1" Margin="0 2 10 2" Grid.ColumnSpan="2" AutoGenerateColumns="False"
-            ItemsSource="{Binding afdelingen}" >
+            ItemsSource="{Binding Recepten}" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Aantal"
                 Binding="{Binding Naam}"/>
