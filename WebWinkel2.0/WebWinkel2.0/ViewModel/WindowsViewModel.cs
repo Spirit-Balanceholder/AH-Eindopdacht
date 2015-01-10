@@ -34,7 +34,16 @@ namespace WebWinkel2._0.ViewModel
 
         private void showAfdelingWindow()
         {
-            _AfdelingWindow.Show();
+            try { _AfdelingWindow.Show(); }
+            catch(Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+                _AfdelingWindow = new AfdelingWindow();
+                _AfdelingWindow.InitializeComponent();
+                _AfdelingWindow.Show();
+            }
+           
         }
 
 
