@@ -80,6 +80,8 @@
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\Productrepository.cs" />
     <Compile Include="Model\Startup.cs" />
+    <Compile Include="Repositories\IProductRepository.cs" />
+    <Compile Include="Repositories\Productrepository.cs" />
     <Compile Include="ViewModel\EindproductListViewModel.cs" />
     <Compile Include="ViewModel\EindproductViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
