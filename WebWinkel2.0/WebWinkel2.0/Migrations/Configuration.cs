@@ -9,7 +9,7 @@ namespace WebWinkel2._0.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "WebWinkel2._0.Model.DataContext";
         }
 

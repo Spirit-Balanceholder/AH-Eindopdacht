@@ -16,8 +16,8 @@ namespace WebWinkel2._0.Model
     {
         public int ReceptID { get; set; }
 
-        //public String ReceptNaam { get; set; }
+        public String ReceptNaam { get; set; }
 
-        public virtual ICollection<Eindproduct> Eindproducten { get; set; }
+        public virtual ICollection<Recept_Has_Eindproduct> Recept_has_Eindproduct { get; set; }
     }
 }

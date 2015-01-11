@@ -19,7 +19,7 @@
             Klant
         </Button>
 
-        <Button Name="btnadmin" Click="btnadmin_Click"
+        <Button Command="{Binding asdsadasdasd}" 
                Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="5,0,0,0">
             Medewerker
         </Button>

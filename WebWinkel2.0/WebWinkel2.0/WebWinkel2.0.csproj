@@ -76,6 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Recept_Has_Eindproduct.cs" />
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\Productrepository.cs" />
     <Compile Include="ViewModel\EindproductListViewModel.cs" />
@@ -88,9 +89,6 @@
     <Compile Include="ViewModel\ReceptViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\WindowsViewModel.cs" />
-    <Compile Include="Views\AdminStartWindow.xaml.cs">
-      <DependentUpon>AdminStartWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\AfdelingWindow.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>AfdelingWindow.xaml</DependentUpon>
@@ -152,10 +150,6 @@
     <Compile Include="Views\StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\AdminStartWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\EindproductWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

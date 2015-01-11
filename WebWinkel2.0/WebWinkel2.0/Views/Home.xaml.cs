@@ -31,19 +31,16 @@ namespace WebWinkel2._0
             lg.ShowDialog();
         }
 
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void btnklant_Click(object sender, RoutedEventArgs e)
         {
             StartWindow sw = new StartWindow();
             sw.InitializeComponent();
             sw.Show();
-        }
-
-        private void btnadmin_Click(object sender, RoutedEventArgs e)
-        {
-            AdminStartWindow asw = new AdminStartWindow();
-            asw.InitializeComponent();
-            asw.Show();
         }
     }
 }
