@@ -78,6 +78,7 @@
     </ApplicationDefinition>
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\Productrepository.cs" />
+    <Compile Include="Model\Startup.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ProductListViewModel.cs" />
     <Compile Include="ViewModel\ProductViewModel.cs" />
