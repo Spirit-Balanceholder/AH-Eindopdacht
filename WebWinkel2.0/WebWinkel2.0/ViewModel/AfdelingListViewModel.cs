@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.CommandWpf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,8 +16,20 @@ namespace WebWinkel2._0.ViewModel
 {
   public class AfdelingListViewModel : ViewModelBase
   {
-     
+      DataContext db;
 
+      //class constructor
+      public AfdelingListViewModel()
+      {
+          SaveChanges = new RelayCommand(Save);
+          AddNew = new RelayCommand(AddNewItem);
+          DeleteSelected = new RelayCommand(Delete);
+
+          db = new DataContext();
+          var afdelingLijst = db.Afdelingen.ToList().Select(a => new AfdelingViewModel(a));
+          Afdelingen = new ObservableCollection<AfdelingViewModel>(afdelingLijst);
+          SelectedAfdeling = new AfdelingViewModel();
+      }
      
 
       //lijst van songview models 
@@ -39,22 +52,39 @@ namespace WebWinkel2._0.ViewModel
           }
       }
 
+      public ICommand SaveChanges { get; set; }
+      public ICommand AddNew { get; set; }
+      public ICommand DeleteSelected { get; set; }
 
-      //class constructor
-      public AfdelingListViewModel()
+      public void Delete()
       {
-                   
-          DataContext db = new DataContext();
-          var afdelingLijst = db.Afdelingen.ToList().Select(a => new AfdelingViewModel(a));
-          Afdelingen = new ObservableCollection<AfdelingViewModel>(afdelingLijst);
+          db.Afdelingen.Remove(SelectedAfdeling.Afdeling);
+          Afdelingen.Remove(SelectedAfdeling);
+          SelectedAfdeling = new AfdelingViewModel();
+      }
+
+      public void Save()
+      {
+          db.SaveChanges();
+      }
+
+      private void AddNewItem()
+      {
+          if (SelectedAfdeling.AfdelingId <= 0)
+          {
+              AfdelingViewModel pvm = new AfdelingViewModel();
+
+              pvm.Naam = SelectedAfdeling.Naam;
+
+              Afdelingen.Add(pvm);
+              db.Afdelingen.Add(pvm.Afdeling);
+          }
+          else
+          {
+              this.SelectedAfdeling = new AfdelingViewModel();
+          }
       }
   
-
-
-
-
-     
-
 
       public event PropertyChangedEventHandler PropertyChanged;
       protected void OnPropertyChanged([CallerMemberName] string propertyName = "")

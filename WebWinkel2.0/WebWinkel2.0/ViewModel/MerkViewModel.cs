@@ -13,12 +13,9 @@ namespace WebWinkel2._0.ViewModel
     {
 
 
-
-
-
         private Merk _merk;
         public event PropertyChangedEventHandler PropertyChanged;
-
+        public Merk Merk { get { return _merk; } }
 
         //properties that link trough to the model's properties.
       
@@ -27,6 +24,12 @@ namespace WebWinkel2._0.ViewModel
         {
             get { return _merk.MerkNaam; }
             set { _merk.MerkNaam = value; OnPropertyChanged(); }
+        }
+
+        public int MerkID
+        {
+            get { return _merk.MerkID; }
+            set { _merk.MerkID = value; OnPropertyChanged(); }
         }
         
     //2 constructors, eentje voor het ontvangen van een model, eentje voor het aanmaken ervan

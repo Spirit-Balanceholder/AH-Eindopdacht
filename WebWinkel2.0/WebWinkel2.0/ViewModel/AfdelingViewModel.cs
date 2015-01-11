@@ -17,7 +17,7 @@ namespace WebWinkel2._0.ViewModel
     {
         private Afdeling _afdeling;
         public event PropertyChangedEventHandler PropertyChanged;
-
+        public Afdeling Afdeling { get { return _afdeling; } }
 
         //properties that link trough to the model's properties.
         public int AfdelingId

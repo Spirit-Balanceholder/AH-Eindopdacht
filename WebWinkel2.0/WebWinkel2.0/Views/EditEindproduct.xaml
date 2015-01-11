@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WebWinkel2._0.Views.EditEindproduct"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="EditEindproduct" Height="160" Width="300">
+        Title="Bewerk Eindproduct" Height="160" Width="300">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width=".8*"/>

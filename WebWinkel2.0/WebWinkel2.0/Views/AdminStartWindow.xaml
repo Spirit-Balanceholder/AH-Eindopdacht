@@ -8,11 +8,11 @@
     <Grid>
         <StackPanel Margin="0,0,0,20">
            
-            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Producten TODO"/>
-            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Afdelingen TODO"/>
-            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Merken TODO"/>
-            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Eindproducten TODO?"/>    
-            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Recepten TODO"/>
+            <Button Command="{Binding ShowProductEditCommand}" Height="50" Content="Bewerk Producten"/>
+            <Button Command="{Binding ShowAfdelingEditCommand}" Height="50" Content="Bewerk Afdelingen"/>
+            <Button Command="{Binding ShowMerkEditCommand}" Height="50" Content="Bewerk Merken"/>
+            <Button Command="{Binding ShowEindproductEditCommand}" Height="50" Content="Bewerk Eindproducten"/>    
+            <Button Command="{Binding ShowReceptEditCommand}" Height="50" Content="Bewerk Recepten"/>
          
         </StackPanel>
     </Grid>

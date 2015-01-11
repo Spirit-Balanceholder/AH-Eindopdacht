@@ -45,5 +45,10 @@ namespace WebWinkel2._0
             asw.InitializeComponent();
             asw.Show();
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
