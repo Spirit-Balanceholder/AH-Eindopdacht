@@ -8,45 +8,40 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using WebWinkel2._0.Model;
-//using WebWinkel2._0.Repositories;
 
 namespace WebWinkel2._0.ViewModel
 {
-    public class ProductListViewModel : ViewModelBase
+    public class MerkListViewModel : ViewModelBase
     {
 
-    
-
-      //lijst van songview models 
-      public ObservableCollection<ProductViewModel> Producten { get; set; }
+        //lijst van songview models 
+      public ObservableCollection<MerkViewModel> Merken { get; set; }
 
       //selected object
-      private ProductViewModel _selectedProduct;
+      private MerkViewModel _selectedMerk;
 
-      //reference property for product
-      public ProductViewModel SelectedProduct
+      //reference property for merk
+      public MerkViewModel SelectedMerk
       {
           get
           {
-              return _selectedProduct;
+              return _selectedMerk;
           }
           set
           {
-              _selectedProduct = value;
-             
+              _selectedMerk = value;         
               RaisePropertyChanged();
           }
       }
 
 
       //class constructor
-      public ProductListViewModel()
+      public MerkListViewModel()
       {
-
+                   
           DataContext db = new DataContext();
-         
-          var productLijst =  db.Producten.ToList().Select(a => new ProductViewModel(a));
-          Producten = new ObservableCollection<ProductViewModel>(productLijst);
+          var merkLijst = db.Merken.ToList().Select(a => new MerkViewModel(a));
+          Merken = new ObservableCollection<MerkViewModel>(merkLijst);
       }
   
 
@@ -64,8 +59,7 @@ namespace WebWinkel2._0.ViewModel
               PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
           }
       }
-    
-  }
+
 
     }
-
+}

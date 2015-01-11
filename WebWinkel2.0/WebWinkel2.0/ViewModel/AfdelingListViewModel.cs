@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -7,17 +8,16 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using WebWinkel2._0.Repositories;
+using WebWinkel2._0.Model;
+
 
 namespace WebWinkel2._0.ViewModel
 {
-  public class AfdelingListViewModel : INotifyPropertyChanged
+  public class AfdelingListViewModel : ViewModelBase
   {
-      //for the purpose of navigation
-     // private int _index;
+     
 
-      //our repository for testing purposes 
-      IAfdelingRepository afdelingrepository;
+     
 
       //lijst van songview models 
       public ObservableCollection<AfdelingViewModel> Afdelingen { get; set; }
@@ -34,9 +34,8 @@ namespace WebWinkel2._0.ViewModel
           }
           set
           {
-              _selectedAfdeling = value;
-             //!!!!!!!!!!!!!!!!!!!!!!!!!!
-              // RaisePropertyChanged();
+              _selectedAfdeling = value;         
+              RaisePropertyChanged();
           }
       }
 
@@ -44,8 +43,9 @@ namespace WebWinkel2._0.ViewModel
       //class constructor
       public AfdelingListViewModel()
       {
-          afdelingrepository = new Afdelingrepository();
-          var afdelingLijst = afdelingrepository.ToList().Select(a => new AfdelingViewModel(a));
+                   
+          DataContext db = new DataContext();
+          var afdelingLijst = db.Afdelingen.ToList().Select(a => new AfdelingViewModel(a));
           Afdelingen = new ObservableCollection<AfdelingViewModel>(afdelingLijst);
       }
   

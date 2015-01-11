@@ -1,8 +1,10 @@
-﻿<Window x:Class="WebWinkel2._0.AfdelingWindow"
+﻿<Window x:Class="WebWinkel2._0.Views.MerkWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AfdelingWindow" Height="500" Width="344.776"
-         DataContext="{Binding Source={StaticResource Locator}, Path=AfdelingListViewModel}">
+        Title="MerkWindow" Height="300" Width="300"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MerkListViewModel}" >
+
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -14,14 +16,14 @@
 
 
     <StackPanel>
-        <TextBlock Text="Afdelingen" FontSize="28" />
-        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedAfdeling}" ItemsSource="{Binding Afdelingen}" Margin="5">
+        <TextBlock Text="Merk" FontSize="28" />
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedMerk}" ItemsSource="{Binding Merken}" Margin="5">
             <DataGrid.Columns>
-                               <DataGridTextColumn Header="Naam" Binding="{Binding Naam}" />
+                            <DataGridTextColumn Header="Naam" Binding="{Binding MerkNaam}" />
             </DataGrid.Columns>
         </DataGrid>
 
-       
+      
 
         <Grid Margin="5,20,0,0">
             <Grid.ColumnDefinitions>
@@ -31,24 +33,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="25" />
                 <RowDefinition Height="25" />
-                
+
             </Grid.RowDefinitions>
+
+            <TextBlock Text="ID:" Grid.Column="0" Grid.Row="0" />
+            <TextBox MaxLength="5" Grid.Column="1" Grid.Row="0" Text="{Binding Path=SelectedMerk.MerkNaam, Mode=TwoWay}" />
 
            
 
-            <TextBlock Text="Naam:" Grid.Column="0" Grid.Row="1" />
-            <TextBox MaxLength="50" Grid.Column="1" Grid.Row="1"  Text="{Binding Path=SelectedAfdeling.Naam, Mode=TwoWay}" Margin="20,0,-20,0" />
-
         </Grid>
-        <Button  Content="Bekijk de producten in deze afdeling" Command="{Binding AddSong}"  HorizontalAlignment="Left" Margin="5,20,0,0"/>
+        
     </StackPanel>
-
-
-
-
-
-
-
 
 
 
