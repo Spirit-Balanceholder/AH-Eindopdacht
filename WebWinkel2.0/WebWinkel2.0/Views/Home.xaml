@@ -1,0 +1,27 @@
+﻿<Window x:Class="WebWinkel2._0.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Home" Height="266" Width="310"
+            >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.ColumnSpan="2" Source="/WebWinkel2.0;component/AHApp.png"></Image>
+        <Button Name="btnklant" Click="btnklant_Click"
+                Grid.Row="1" Grid.RowSpan="2" >
+            Klant
+        </Button>
+
+        <Button Name="btnadmin" Click="btnadmin_Click"
+               Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="5,0,0,0">
+            Medewerker
+        </Button>
+    </Grid>
+</Window>
