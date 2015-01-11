@@ -78,9 +78,14 @@
     </ApplicationDefinition>
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\Productrepository.cs" />
+    <Compile Include="ViewModel\EindproductListViewModel.cs" />
+    <Compile Include="ViewModel\EindproductViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MerkListViewModel.cs" />
+    <Compile Include="ViewModel\MerkViewModel.cs" />
     <Compile Include="ViewModel\ProductListViewModel.cs" />
     <Compile Include="ViewModel\ProductViewModel.cs" />
+    <Compile Include="ViewModel\ReceptViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\WindowsViewModel.cs" />
     <Compile Include="Views\AfdelingWindow.xaml.cs">
@@ -108,6 +113,9 @@
     <Compile Include="Views\EditRecept.xaml.cs">
       <DependentUpon>EditRecept.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EindproductWindow.xaml.cs">
+      <DependentUpon>EindproductWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -132,12 +140,23 @@
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MerkWindow.xaml.cs">
+      <DependentUpon>MerkWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProductWindow.xaml.cs">
       <DependentUpon>ProductWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\EindproductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MerkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ProductWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

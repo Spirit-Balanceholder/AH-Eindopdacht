@@ -15,18 +15,35 @@ namespace WebWinkel2._0.ViewModel
         //private references to all windows
         private AfdelingWindow _AfdelingWindow;
         private ProductWindow _ProductWindow;
+        private EindproductWindow _EindproductWindow;
+        private MerkWindow _MerkWindow;
+        private StartWindow _StartWindow;
        
       //add different icommands per window
         public ICommand ShowAfdelingWindowCommand { get; set; }
         public ICommand ShowProductWindowCommand { get; set; }
 
+        public ICommand ShowEindproductWindowCommand { get; set; }
+
+        public ICommand ShowMerkWindowCommand { get; set; }
+
+        public ICommand ShowStartWindowCommand { get; set; }
+
+     
+
         public WindowsViewModel()
         {
             _AfdelingWindow = new AfdelingWindow();
             _ProductWindow = new ProductWindow();
+            _EindproductWindow = new EindproductWindow();
+            _MerkWindow = new MerkWindow();
+          //  _StartWindow = new StartWindow();
 
             ShowAfdelingWindowCommand = new RelayCommand(showAfdelingWindow, canShowAfdelingWindow);
             ShowProductWindowCommand = new RelayCommand(showProductWindow, canShowProductWindow);
+            ShowEindproductWindowCommand = new RelayCommand(showEindproductWindow, canShowEindproductWindow);
+            ShowMerkWindowCommand = new RelayCommand(showMerkWindow, canShowMerkWindow);
+         //   ShowStartWindowCommand = new RelayCommand(showStartWindow, canShowStartWindow);
         }
 
 
@@ -77,8 +94,74 @@ namespace WebWinkel2._0.ViewModel
         }
         #endregion
 
+        #region Eindproduct
+        private void showEindproductWindow()
+        {
+            try { _EindproductWindow.Show(); }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+                _EindproductWindow = new EindproductWindow();
+                _EindproductWindow.InitializeComponent();
+                _EindproductWindow.Show();
+              
+            }
+
+        }
+
+        private bool canShowEindproductWindow()
+        {
+            return _EindproductWindow.IsVisible == false;
+        }
+        #endregion
+
+        #region Merk
+        private void showMerkWindow()
+        {
+            try { _MerkWindow.Show(); }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+                _MerkWindow = new MerkWindow();
+                _MerkWindow.InitializeComponent();
+                _MerkWindow.Show();
+
+               
+
+            }
+
+        }
+
+        private bool canShowMerkWindow()
+        {
+            return _MerkWindow.IsVisible == false;
+        }
+        #endregion
+
+    //    #region StartWindow
+    //    private void showStartWindow()
+    //    {
+    //        try { _StartWindow.Show(); }
+    //        catch (Exception e)
+    //        {
+
+    //            Console.WriteLine(e.Message);
+    //            _StartWindow = new StartWindow();
+    //            _StartWindow.InitializeComponent();
+    //            _StartWindow.Show();
 
 
 
+    //        }
+
+    //    }
+
+    //    private bool canShowStartWindow()
+    //    {
+    //        return _StartWindow.IsVisible == false;
+    //    }
+    //    #endregion
     }
 }
