@@ -40,7 +40,7 @@ namespace WebWinkel2._0.Model
 
         public DbSet<Recept> Recepten { get; set; }
 
-      
+        public DbSet<Recept_Has_Eindproduct> Recept_Has_Eindproduct { get; set; }
 
 
 
