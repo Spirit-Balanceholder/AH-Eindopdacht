@@ -31,11 +31,7 @@ namespace WebWinkel2._0.ViewModel
             set { _eindproduct.Merk.MerkNaam = value; OnPropertyChanged(); }
         }
 
-        //public int Eindproduct_Prijs
-        //{
-        //     get { return _eindproduct.Prijs.Hoeveelheid; }
-        //    set { _eindproduct.Prijs.Hoeveelheid = value; OnPropertyChanged(); }
-        //}
+     
 
 
        

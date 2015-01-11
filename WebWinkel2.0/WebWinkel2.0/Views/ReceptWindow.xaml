@@ -1,0 +1,44 @@
+﻿<Window x:Class="WebWinkel2._0.Views.ReceptWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ReceptWindow" Height="600" Width="400"
+        DataContext="{Binding Source={StaticResource Locator}, Path=ReceptListViewModel}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+
+    <StackPanel>
+        <TextBlock Text="Recepten" FontSize="28" />
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedRecept}" ItemsSource="{Binding Recepten}" Margin="5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Naam" Binding="{Binding Naam}" />
+                <DataGridTextColumn Header="Totaalprijs" Binding="{Binding TotaalPrijs}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBlock Text="Ingredienten" FontSize="28" />
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True"  ItemsSource="{Binding SelectedRecept.Eindproducten}" Margin="5">
+            <DataGrid.Columns>
+                <!--programma geeft verkeerde suggesties top kek-->
+                <DataGridTextColumn Header="Naam" Binding="{Binding Product.ProductNaam}" />
+                <DataGridTextColumn Header="Prijs" Binding="{Binding Prijs.Hoeveelheid}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        
+
+
+       
+        <Button  Content="Voeg toe aan winkelwagenTODO" Command="{Binding AddSong}"  HorizontalAlignment="Left" Margin="5,20,0,0"/>
+    </StackPanel>
+
+
+
+
+</Window>

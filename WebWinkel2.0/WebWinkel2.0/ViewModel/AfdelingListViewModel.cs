@@ -37,7 +37,7 @@ namespace WebWinkel2._0.ViewModel
 
       //selected object
       private AfdelingViewModel _selectedAfdeling;
-
+      private EindproductViewModel _selectedEindproduct;
       //reference property for afdeling
       public AfdelingViewModel SelectedAfdeling
       {
@@ -55,6 +55,20 @@ namespace WebWinkel2._0.ViewModel
       public ICommand SaveChanges { get; set; }
       public ICommand AddNew { get; set; }
       public ICommand DeleteSelected { get; set; }
+
+      public EindproductViewModel SelectedEindproduct
+      {
+          get
+          {
+              return _selectedEindproduct;
+          }
+          set
+          {
+              _selectedEindproduct = value;
+              RaisePropertyChanged();
+          }
+      }
+
 
       public void Delete()
       {
