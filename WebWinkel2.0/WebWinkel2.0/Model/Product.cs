@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace WebWinkel2._0.Model
 {
+    //add viewmodel DONE
+    //add listviewmodel DONE
+    //add to locator DONE
+    //bind to view DONE
+    //add to manager
     public class Product
     {
         public int ProductID { get; set; }
