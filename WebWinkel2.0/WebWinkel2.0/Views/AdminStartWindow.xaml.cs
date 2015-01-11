@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WebWinkel2._0
+namespace WebWinkel2._0.Views
 {
     /// <summary>
-    /// Interaction logic for StartWindow.xaml
+    /// Interaction logic for AdminStartWindow.xaml
     /// </summary>
-    public partial class StartWindow : Window
+    public partial class AdminStartWindow : Window
     {
-        public StartWindow()
+        public AdminStartWindow()
         {
             InitializeComponent();
         }
