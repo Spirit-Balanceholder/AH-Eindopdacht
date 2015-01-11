@@ -1,8 +1,19 @@
 ﻿<Window x:Class="WebWinkel2._0.Views.AdminStartWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AdminStartWindow" Height="300" Width="300">
+        Title="AdminStartWindow" Height="300" Width="300" DataContext="{Binding Manager, Source={StaticResource Locator}}">
+
+
+
     <Grid>
-        
+        <StackPanel Margin="0,0,0,20">
+           
+            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Producten TODO"/>
+            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Afdelingen TODO"/>
+            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Merken TODO"/>
+            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Eindproducten TODO?"/>    
+            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Bewerk Recepten TODO"/>
+         
+        </StackPanel>
     </Grid>
 </Window>
