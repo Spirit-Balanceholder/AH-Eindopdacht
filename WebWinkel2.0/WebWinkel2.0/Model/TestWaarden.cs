@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +9,16 @@ namespace WebWinkel2._0.Model
 {
     class TestWaarden
     {
+        public static void Clear<T>(this DbSet<T> dbSet) where T : class
+        {
+            dbSet.RemoveRange(dbSet);
+        }
+
         public void EmptyFB()
         {
             using (var dbCtx = new DataContext())
             {
-                //var objCtx = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)dbCtx).ObjectContext;
-                //objCtx.ExecuteStoreCommand("TRUNCATE TABLE ");
 
-                ////call SaveChanges method to save student into database
-                //dbCtx.SaveChanges();
             }
         }
 
