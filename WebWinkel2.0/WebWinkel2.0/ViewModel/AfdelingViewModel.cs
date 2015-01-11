@@ -31,7 +31,7 @@ namespace WebWinkel2._0.ViewModel
             get { return _afdeling.Naam; }
             set { _afdeling.Naam = value; OnPropertyChanged(); }
         }
-
+        //ADDED BY BRAM
         public List<Eindproduct> EindProducten
         {
             get
@@ -58,6 +58,8 @@ namespace WebWinkel2._0.ViewModel
             }
             set { }
     }
+
+        //END 
         
     //2 constructors, eentje voor het ontvangen van een model, eentje voor het aanmaken ervan
     public AfdelingViewModel()

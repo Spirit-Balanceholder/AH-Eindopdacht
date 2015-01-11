@@ -148,7 +148,7 @@ namespace WebWinkel2._0.ViewModel
 
 
 
-
+//brams nieuwe shit
         #region Recept
         private ReceptWindow _ReceptWindow;
 
@@ -180,6 +180,6 @@ namespace WebWinkel2._0.ViewModel
 
         #endregion
 
-
+        //eind
     }
 }
