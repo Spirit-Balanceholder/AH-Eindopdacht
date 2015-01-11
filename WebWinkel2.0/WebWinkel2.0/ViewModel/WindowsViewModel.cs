@@ -38,6 +38,11 @@ namespace WebWinkel2._0.ViewModel
             _EindproductWindow = new EindproductWindow();
             _MerkWindow = new MerkWindow();
 
+            //BRAMS NIEUWE SHIT
+            _ReceptWindow = new ReceptWindow();
+            ShowReceptWindowCommand = new RelayCommand(showReceptWindow, canShowReceptWindow);
+            //EIND
+
 
             ShowAfdelingWindowCommand = new RelayCommand(showAfdelingWindow, canShowAfdelingWindow);
             ShowProductWindowCommand = new RelayCommand(showProductWindow, canShowProductWindow);
@@ -139,6 +144,42 @@ namespace WebWinkel2._0.ViewModel
             return _MerkWindow.IsVisible == false;
         }
         #endregion
+
+
+
+
+
+        #region Recept
+        private ReceptWindow _ReceptWindow;
+
+        public ICommand ShowReceptWindowCommand { get; set; }
+
+
+        private void showReceptWindow()
+        {
+            try { _ReceptWindow.Show(); }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+                _ReceptWindow = new ReceptWindow();
+                _ReceptWindow.InitializeComponent();
+                _ReceptWindow.Show();
+                
+
+
+            }
+
+        }
+
+        private bool canShowReceptWindow()
+        {
+            return _ReceptWindow.IsVisible == false;
+        }
+
+
+        #endregion
+
 
     }
 }

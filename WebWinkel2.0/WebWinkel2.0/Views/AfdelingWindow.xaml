@@ -21,7 +21,24 @@
             </DataGrid.Columns>
         </DataGrid>
 
-       
+        <TextBlock Text="Producten" FontSize="28" />
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedEindproduct}" ItemsSource="{Binding SelectedAfdeling.EindProducten}" Margin="5">
+            <DataGrid.Columns>
+               
+                <DataGridTextColumn Header="Naam" Binding="{Binding Product.ProductNaam}" />
+              
+            </DataGrid.Columns>
+        </DataGrid>
+
+      
+        <TextBlock Text="Merken(Werkt niet)" FontSize="28" />
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True"  ItemsSource="{Binding SelectedAfdeling.EindProducten}" Margin="5">
+            <DataGrid.Columns>
+                <!--programma geeft verkeerde suggesties top kek-->
+                <DataGridTextColumn Header="Naam" Binding="{Binding SelectedEindproduct.Eindproduct_MerkNaam}" />
+                
+            </DataGrid.Columns>
+        </DataGrid>
 
         <Grid Margin="5,20,0,0">
             <Grid.ColumnDefinitions>
@@ -36,11 +53,9 @@
 
            
 
-            <TextBlock Text="Naam:" Grid.Column="0" Grid.Row="1" />
-            <TextBox MaxLength="50" Grid.Column="1" Grid.Row="1"  Text="{Binding Path=SelectedAfdeling.Naam, Mode=TwoWay}" Margin="20,0,-20,0" />
+        
 
         </Grid>
-        <Button  Content="Bekijk de producten in deze afdeling" Command="{Binding AddSong}"  HorizontalAlignment="Left" Margin="5,20,0,0"/>
     </StackPanel>
 
 

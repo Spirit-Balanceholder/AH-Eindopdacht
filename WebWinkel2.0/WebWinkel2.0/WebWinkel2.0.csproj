@@ -77,8 +77,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Recept_Has_Eindproduct.cs" />
-    <Compile Include="Repositories\IProductRepository.cs" />
-    <Compile Include="Repositories\Productrepository.cs" />
     <Compile Include="ViewModel\EindproductListViewModel.cs" />
     <Compile Include="ViewModel\EindproductViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -86,6 +84,7 @@
     <Compile Include="ViewModel\MerkViewModel.cs" />
     <Compile Include="ViewModel\ProductListViewModel.cs" />
     <Compile Include="ViewModel\ProductViewModel.cs" />
+    <Compile Include="ViewModel\ReceptListViewModel.cs" />
     <Compile Include="ViewModel\ReceptViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\WindowsViewModel.cs" />
@@ -137,8 +136,6 @@
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Recept.cs" />
     <Compile Include="Model\TestWaarden.cs" />
-    <Compile Include="Repositories\Afdelingrepository.cs" />
-    <Compile Include="Repositories\IAfdelingRepository.cs" />
     <Compile Include="ViewModel\AfdelingListViewModel.cs" />
     <Compile Include="ViewModel\AfdelingViewModel.cs" />
     <Compile Include="Views\Login.xaml.cs">
@@ -149,6 +146,9 @@
     </Compile>
     <Compile Include="Views\ProductWindow.xaml.cs">
       <DependentUpon>ProductWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReceptWindow.xaml.cs">
+      <DependentUpon>ReceptWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
@@ -166,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ProductWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReceptWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

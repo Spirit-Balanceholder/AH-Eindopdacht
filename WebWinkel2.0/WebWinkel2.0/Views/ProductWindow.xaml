@@ -19,13 +19,16 @@
 
 
         <StackPanel>
-            <!--<TextBlock Text="Producten" FontSize="28" />-->
+            <TextBlock Text="Producten" FontSize="28" />
             <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedProduct}" ItemsSource="{Binding Producten}" Margin="5">
                 <DataGrid.Columns>
                   
                     <DataGridTextColumn Header="Product" Binding="{Binding Naam}" />
                 </DataGrid.Columns>
             </DataGrid>
+
+           
+            
             <Grid Margin="5,20,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />

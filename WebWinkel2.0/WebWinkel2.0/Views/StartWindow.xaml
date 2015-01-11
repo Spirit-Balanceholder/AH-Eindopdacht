@@ -8,11 +8,11 @@
 
     <Grid>
         <StackPanel Margin="0,0,0,20">
-            <!--<Button Command="{Binding ShowAfdelingWindowCommand}" Height="50">Zie Afdelingen</Button>-->
+            <Button Command="{Binding ShowAfdelingWindowCommand}" Height="50">Zie Afdelingen</Button>
             <!--<Button Command="{Binding ShowMerkWindowCommand}" Height="50">Zie Merken</Button>-->
             <!--<Button Command="{Binding ShowMerkWindowCommand}" Height="50">Zie Merken</Button>-->
             <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Zie Producten"/>
-            <Button Command="{Binding ShowProductWindowCommand}" Height="50" Content="Zie Recepten TODO"/>
+            <Button Command="{Binding ShowReceptWindowCommand}" Height="50" Content="Zie Recepten TODO"/>
             <!--<Button Command="{Binding ShowEindproductWindowCommand}" Height="50">Zie Eindproducten</Button>-->
         </StackPanel>
     </Grid>

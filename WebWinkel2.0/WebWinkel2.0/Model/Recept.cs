@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WebWinkel2._0.Model
 {
-    //add viewmodel 
-    //add listviewmodel
-    //add to locator 
+    //add viewmodel DONE
+    //add listviewmodel DONE
+    //add to locator DONE
     //bind to view 
     //add to manager
 
