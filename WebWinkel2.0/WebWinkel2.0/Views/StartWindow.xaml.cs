@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WebWinkel2._0.Model;
 
 namespace WebWinkel2._0
 {
@@ -22,7 +21,6 @@ namespace WebWinkel2._0
     {
         public StartWindow()
         {
-            Startup.AppLaunch();
             InitializeComponent();
         }
     }
