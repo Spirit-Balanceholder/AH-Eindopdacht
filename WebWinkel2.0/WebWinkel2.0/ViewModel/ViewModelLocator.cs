@@ -35,6 +35,8 @@ namespace WebWinkel2._0.ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<WindowsViewModel>();
             SimpleIoc.Default.Register<ProductListViewModel>();
+            SimpleIoc.Default.Register<EindproductListViewModel>();
+            SimpleIoc.Default.Register<MerkListViewModel>();
             # region designmode
             ////if (ViewModelBase.IsInDesignModeStatic)
             ////{
@@ -73,6 +75,22 @@ namespace WebWinkel2._0.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<ProductListViewModel>();
+            }
+        }
+
+        public EindproductListViewModel EindproductListViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<EindproductListViewModel>();
+            }
+        }
+
+        public MerkListViewModel MerkListViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MerkListViewModel>();
             }
         }
 

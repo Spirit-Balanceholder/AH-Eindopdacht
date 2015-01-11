@@ -8,45 +8,43 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using WebWinkel2._0.Model;
-//using WebWinkel2._0.Repositories;
 
 namespace WebWinkel2._0.ViewModel
 {
-    public class ProductListViewModel : ViewModelBase
+  public  class EindproductListViewModel : ViewModelBase
     {
 
-    
+        //our repository for testing purposes 
+     // Eindproductrepository eindproductrepository;
 
       //lijst van songview models 
-      public ObservableCollection<ProductViewModel> Producten { get; set; }
+      public ObservableCollection<EindproductViewModel> Eindproducten { get; set; }
 
       //selected object
-      private ProductViewModel _selectedProduct;
+      private EindproductViewModel _selectedEindproduct;
 
-      //reference property for product
-      public ProductViewModel SelectedProduct
+      //reference property for eindproduct
+      public EindproductViewModel SelectedEindproduct
       {
           get
           {
-              return _selectedProduct;
+              return _selectedEindproduct;
           }
           set
           {
-              _selectedProduct = value;
-             
+              _selectedEindproduct = value;         
               RaisePropertyChanged();
           }
       }
 
 
       //class constructor
-      public ProductListViewModel()
+      public EindproductListViewModel()
       {
-
+                   
           DataContext db = new DataContext();
-         
-          var productLijst =  db.Producten.ToList().Select(a => new ProductViewModel(a));
-          Producten = new ObservableCollection<ProductViewModel>(productLijst);
+          var eindproductLijst = db.Eindproducten.ToList().Select(a => new EindproductViewModel(a));
+          Eindproducten = new ObservableCollection<EindproductViewModel>(eindproductLijst);
       }
   
 
@@ -64,8 +62,6 @@ namespace WebWinkel2._0.ViewModel
               PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
           }
       }
-    
-  }
 
     }
-
+}
