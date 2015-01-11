@@ -27,8 +27,12 @@ namespace WebWinkel2._0.Model
 
         [ForeignKey("Merk")]
         public int? MerkID { get; set; }
-
         public virtual Merk Merk { get; set; }
+
+
+        [ForeignKey("Prijs")]
+        public int? PrijsID { get; set; }
+        public virtual Prijs Prijs { get; set; }
 
 
         [ForeignKey("Boodschappenlijst")]
@@ -36,12 +40,7 @@ namespace WebWinkel2._0.Model
 
         public virtual Boodschappenlijst Boodschappenlijst { get; set; }
 
-        [ForeignKey("Recept")]
-        public int? ReceptID { get; set; }
-
-        public virtual Recept Recept { get; set; }
-
-
+        public virtual ICollection<Recept_Has_Eindproduct> Recept_has_Eindproduct { get; set; }
 
         public virtual ICollection<Korting>  Kortingen{ get; set; }
 
