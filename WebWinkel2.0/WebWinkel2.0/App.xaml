@@ -6,7 +6,7 @@
     d1p1:Ignorable="d" 
     xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
      xmlns:vm="clr-namespace:WebWinkel2._0.ViewModel"
-     StartupUri="Views/StartWindow.xaml"
+     StartupUri="Views/Home.xaml"
     >
    
     <Application.Resources>

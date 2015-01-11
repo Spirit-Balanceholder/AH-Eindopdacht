@@ -30,5 +30,17 @@ namespace WebWinkel2._0
             Login lg = new Login();
             lg.ShowDialog();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnklant_Click(object sender, RoutedEventArgs e)
+        {
+            StartWindow sw = new StartWindow();
+            sw.InitializeComponent();
+            sw.Show();
+        }
     }
 }
